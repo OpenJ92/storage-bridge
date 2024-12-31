@@ -13,7 +13,7 @@ Modern applications often require integration with multiple storage systems—lo
 Install via pip:
 
 ```bash
-pip install storage-manager
+pip install storage-bridge
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ Additional methods like exists, update, save_batch, and backup are derived from 
 
 #### Example: File-Based Storage
 ```python
-from storage_manager.implementation import FileStorage
+from storage_bridge.implementation import FileStorage
 
 # Create a file-based storage backend
 store = FileStorage(filepath='data.json')
@@ -46,7 +46,7 @@ store.delete('user')
 
 #### Example: In-Memory Storage
 ```python
-from storage_manager.implementation import MemoryStorage
+from storage_bridge.implementation import MemoryStorage
 
 # Create an in-memory storage backend
 memory_store = MemoryStorage()
@@ -58,7 +58,7 @@ print(memory_store.load('session'))  # Output: {'token': 'abc123'}
 
 #### Testing with Mock Storage
 ```python
-from storage_manager.implementation import MemoryStorage
+from storage_bridge.implementation import MemoryStorage
 
 def test_storage():
     mock_store = MemoryStorage()
@@ -73,7 +73,7 @@ To create a custom storage backend, subclass Storage and implement the core meth
 
 Example: Custom Storage
 ```python
-from storage_manager.typeclass import Storage
+from storage_bridge.typeclass import Storage
 
 class CustomStorage(Storage):
     def __init__(self):
