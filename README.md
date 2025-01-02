@@ -13,7 +13,7 @@ Modern applications often require integration with multiple storage systems—lo
 Install via pip:
 
 ```bash
-pip install storage-bridge
+pip install storage_bridge
 ```
 
 ## Usage
