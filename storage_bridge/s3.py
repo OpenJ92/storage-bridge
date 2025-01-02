@@ -1,7 +1,7 @@
 import boto3
 from botocore.exceptions import NoCredentialsError
 
-from starcraft_data_orm.storage.storage import Storage
+from storage_bridge.storage import Storage
 
 class S3Storage(Storage):
     def __init__(self, bucket_name: str, region_name: str = "us-east-1"):

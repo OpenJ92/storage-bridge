@@ -1,2 +1,2 @@
-from starcraft_data_orm.storage.local import LocalStorage
-from starcraft_data_orm.storage.s3 import S3Storage
+from storage_bridge.local import LocalStorage
+from storage_bridge.s3 import S3Storage
